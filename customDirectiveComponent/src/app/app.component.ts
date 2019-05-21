@@ -6,15 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  major : number = 1;
-  minor :number = 23;
- 
-  newMinor() {
-    this.minor++;
-  }
- 
-  newMajor() : void
-  {
-    ++this.major;
-  }
+  title = 'customDirectiveComponent';
 }

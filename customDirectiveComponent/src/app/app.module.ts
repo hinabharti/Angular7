@@ -2,12 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ChildComponentComponent } from './child-component/child-component.component';
+import { ChangeTextDirective } from './change-text.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChildComponentComponent
+    ChangeTextDirective
   ],
   imports: [
     BrowserModule
