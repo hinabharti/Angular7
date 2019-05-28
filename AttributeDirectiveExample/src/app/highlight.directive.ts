@@ -22,7 +22,13 @@ export class HighlightDirective {
   }
 
   constructor(private e1 : ElementRef) { 
-      
+    console.log(this.highlightColor);
   } 
+  ngOnInit() {
+    console.log(this.highlightColor);
+  }
+  ngAfterViewInit() {
+    console.log(this.highlightColor);
+  }
 
 }
