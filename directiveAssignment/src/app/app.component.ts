@@ -9,8 +9,16 @@ export class AppComponent {
   title = 'directiveAssignment';
   displayPara:boolean = false;
   btnMessage : string =  "Display Details";
-  display ()
+  dataArray : string[] =[] ;
+  idx : number = 0;
+   data : string ;
+   add() :void {
+    this.dataArray.push(this.data);
+    this.data = "";
+   }
+   display ()
   {
+    
     if(this.btnMessage === "Display Details" )
     {
     this.displayPara = true ;
@@ -18,7 +26,7 @@ export class AppComponent {
     }
     else
     {
-      this.displayPara = false ;
+     this.displayPara = false ;
     this.btnMessage = "Display Details";
     }
 

@@ -1,0 +1,9 @@
+.product
+{
+    flex-direction: column;
+    display: inline-flex;
+}
+.textCenter
+{
+    text-align: -webkit-center;
+}
