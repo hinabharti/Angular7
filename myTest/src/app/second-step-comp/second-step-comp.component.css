@@ -1,0 +1,48 @@
+.containerCards
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-height: 431px;
+    overflow-x: hidden;
+}
+.card-container
+{
+    padding: 13px;
+    border: 1px solid;
+    box-shadow: 5px 5px 5px 5px #888888;
+    margin: 18px;
+}
+.pcName-span
+{
+    font-family: sans-serif;
+    margin-right: 51px;
+    font-size: 18px;
+}
+.os-span
+{
+    margin-left: 45px;
+    font-size: 12px;
+}
+.loginUser
+{
+    margin-top: 19px;
+    font: -webkit-mini-control;
+    margin-bottom: 13px;
+}
+.loginTImeSpan
+{
+    font: -webkit-mini-control;
+    margin-right: 49px;
+}
+.logOutTimeSpan
+{
+    font: -webkit-mini-control;
+}
+.linkSpan
+{
+    text-decoration: underline;
+    cursor: pointer;
+    font: -webkit-mini-control;
+    margin-top: 13px;
+}

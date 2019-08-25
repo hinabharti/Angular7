@@ -13,7 +13,7 @@ export class AuthGuardService {
   {
   if(this.authentication.isLoggedIn)
   {
-    return true;
+    return true;[]
   }
   alert("first login");
   this.router.navigate(['/login']);

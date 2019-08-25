@@ -1,0 +1,46 @@
+<div class="tab-container">
+        <div>
+                <tabs class="tabsTag custom">
+                        <tab tabTitle="Live" active="true" class="tab-content-position ">
+                          <table class="table table-bordered">
+                              <thead>
+                                  <th>PC Name</th>
+                                  <th>Problem</th>
+                              </thead>
+                              <tbody>
+                                   <tr>
+                                       <td>PC - 1</td>
+                                       <td>Control Lost</td>
+                                   </tr>
+                                   <tr>
+                                      <td>PC - 2</td>
+                                      <td>Under Observation</td>
+                                  </tr>
+                                  <tr>
+                                      <td>PC- 3</td>
+                                      <td>Status Unknown</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                        </tab>
+                        <tab tabTitle="Triage" class="tab-content-position">
+                          I am the triage content
+                        </tab>
+                        <tab tabTitle="Fixed" class="tab-content-position">
+                            I am the Fixed content
+                          </tab>
+                        </tabs>
+        </div>  
+        <div class="barGraph">
+            <div style="display: block;">
+                <canvas baseChart 
+                  [datasets]="barChartData"
+                  [labels]="barChartLabels"
+                  [options]="barChartOptions"
+                  [plugins]="barChartPlugins"
+                  [legend]="barChartLegend"
+                  [chartType]="barChartType">
+                </canvas>
+              </div>
+        </div>
+</div>   

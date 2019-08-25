@@ -1,0 +1,49 @@
+.side-nav
+{
+    height: 100%;
+    width: 3%;
+    padding: 5px;
+    background-color: #bee4f3;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+}
+.main
+{
+    width: 97%;
+    float: right;
+    left: 3%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    /* background-color: red; */
+    /* padding-left: 40px; */
+    border: 1px solid;
+}
+
+.float-right
+{
+    float: right;
+}
+.home-position
+{
+    top: 104px;
+    position: relative;
+    cursor: pointer;
+}
+.logout-position
+{
+    cursor: pointer;
+}
+.workspace-position
+{
+    position: relative;
+    top: 209px;
+    cursor: pointer;
+}
+.setting-position
+{
+    position: relative;
+    top: 316px;
+    cursor: pointer;
+}

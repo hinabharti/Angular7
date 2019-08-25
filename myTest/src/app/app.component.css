@@ -1,0 +1,28 @@
+.stepBtn
+{
+    background-color: blue;
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.btnDIv
+{
+    position: absolute;
+    bottom: 53px;
+    right: 81px;
+}
+.btn.disabled, .btn:disabled {
+    cursor: not-allowed;
+}
+.finalBtn
+{
+    position: absolute;
+    right: 553px;
+    top: 291px;
+}
+.finalStepText
+{
+    position: absolute;
+    left: 614px;
+    top: 201px;
+}

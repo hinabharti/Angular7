@@ -1,0 +1,31 @@
+<aw-wizard [navBarLayout]="'large-filled'">
+  <aw-wizard-step [navigationSymbol]="{ symbol: '1' }" stepTitle="Dashboard">
+   
+    <app-first-step-comp></app-first-step-comp>
+    <div class="btnDIv">
+    <button type="button" class="btn btn-light stepBtn" awNextStep>Next</button>
+    </div>
+    <!-- <button type="button" [awGoToStep]="{stepIndex: 3}">Go directly to third Step</button>-->
+  </aw-wizard-step> 
+  <aw-wizard-step [canEnter] ="true" [navigationSymbol]="{ symbol: '2' }" stepTitle="Identity" awOptionalStep>
+    <app-second-step-comp (clickEnable)="getFlagForThirdStep($event)"></app-second-step-comp>
+    <div class="btnDIv">
+    <button type="button" class="btn btn-light stepBtn m-1"  awPreviousStep>Back</button>
+    <button type="button" class="btn btn-light stepBtn" [disabled]="thirdStepNextFlag" awNextStep>Next</button>
+    </div>
+  </aw-wizard-step>
+  <aw-wizard-step [navigationSymbol]="{ symbol: '3' }" stepTitle="Possible Solutions" awOptionalStep>
+    <app-third-step-comp (clickSecondEnable)="getFlagForFourthStep($event)"></app-third-step-comp>
+    <div class="btnDIv">
+    <button type="button" class="btn btn-light stepBtn m-1" awPreviousStep>Back</button>
+    <button type="button" class="btn btn-light stepBtn" [disabled]="fourStepNextFlag" awNextStep>Next</button>
+    </div>
+  </aw-wizard-step>
+  <aw-wizard-completion-step [navigationSymbol]="{ symbol: '4' }" stepTitle="Implement" awEnableBackLinks>
+      
+    <div class="finalStepText">Fixed Thank You !</div>
+    <div class="finalBtn">
+    <button type="button"  class="btn btn-light stepBtn" (finalize)="finalizeStep()">Done Back To Dashboard</button>
+     </div>
+  </aw-wizard-completion-step>
+</aw-wizard>

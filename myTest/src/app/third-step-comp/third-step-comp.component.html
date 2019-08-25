@@ -1,0 +1,35 @@
+<form [formGroup]="selectForm" (ngSubmit) = "save()">
+    <div class="row">
+    <div class="col-md-4">
+                <label for="inputDurationInWeek3" class="col-form-label">Risk</label>
+                <div>
+                  <select formControlName="risk" name="risk" #t (change)="selectFIrst(t.value)" >
+                  <option value ="" disabled selected hidden>Please Choose Risk....</option>    
+                  <option [value]="riskValue" *ngFor ="let data of riskValue">{{data}}</option>
+                  </select>
+                </div>        
+    </div>
+     <div class="col-md-4" >
+            <label for="inputDurationInWeek3" class="col-form-label">Severity</label>
+            <div>
+            <select formControlName="severity"  #r (change)="selectFIrst(r.value)">
+            <option value ="" disabled selected hidden>Please Choose Severity....</option>    
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+            </select>
+            </div>        
+    </div>
+    <div class="col-md-4">
+            <label for="inputDurationInWeek3" class="col-form-label">Possible Solution</label>
+            <div>
+            <select formControlName="solution"  #u (change)="selectFIrst(u.value)">
+            <option value ="" disabled selected hidden>Please Choose Possible Solution....</option>     
+            <option value="opt1">Option 1</option>
+            <option value="opt2">Option 2</option>
+            <option value="opt3">Option 3</option>
+            </select>
+            </div>        
+    </div>            
+    </div>
+</form>   

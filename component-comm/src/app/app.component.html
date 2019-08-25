@@ -4,4 +4,14 @@
     <app-my-dropdown [dataType]="type" (changetype)="changed($event)"></app-my-dropdown>
   </div>
 </div>
+<div class = "row">
+  <div class = "col">
+    <app-through-reference #ref></app-through-reference>
+    </div>
+</div>
+<div class = "row">
+    <div class = "col">
+       <button (click)="ref.show()">Show</button> 
+      </div>
+  </div>
 </div>

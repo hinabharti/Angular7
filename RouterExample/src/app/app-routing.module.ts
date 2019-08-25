@@ -1,17 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { ProductsComponent } from './products/products.component';
 import { LoginComponent } from './login/login.component';
-import { AdminComponent } from './admin/admin.component';
-import { ProductEditComponent } from './product-edit/product-edit.component';
+import { ProductEditComponent } from './admin-routing/product-edit/product-edit.component';
 import { AuthGuardService } from './service/auth-guard.service';
+import { NoPageComponent } from './no-page/no-page.component';
 
 
 const routes: Routes = [
   {
     path :"",
-    redirectTo :"\home",
+    redirectTo :"home",
     pathMatch : "full",
   },
   {
@@ -19,6 +18,9 @@ const routes: Routes = [
     component : HomeComponent,
   },
   {
+    path : "admin" ,loadChildren : "../app/admin-routing/admin.module#AdminModule"
+  },
+ /*  {
     path : "admin",
     component : AdminComponent,
     canActivate :[AuthGuardService],
@@ -27,10 +29,14 @@ const routes: Routes = [
       {path : '', component : ProductsComponent },
       {path : 'productEdit/:id', component: ProductEditComponent}
     ]
-  },
+  }, */
   {
     path : "login",
     component : LoginComponent
+  },
+  {
+    path : '**',
+    component : NoPageComponent
   }
 ];
 

@@ -1,0 +1,27 @@
+.optionBar
+{
+    display: flex;
+    flex-flow: row-reverse;
+}
+.notification-container
+{
+    flex-flow: nowrap;
+    flex-shrink: inherit;
+    left: 0%;
+    text-overflow: ellipsis;
+    background-color: red;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 10px;
+    left: 207px;
+    color: floralwhite;
+    display: flex;
+}
+.card
+{
+    float: left;
+    margin: 5px;
+    position: relative;
+    width: 207px;
+}

@@ -4,7 +4,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { EmployeeDetailsComponent } from './inquiry/employee-details/employee-details.component';
 import { InquiryEmployeeService } from './inquiry/inquiry-employee.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpInterceptorServiceService } from './service/http-interceptor-service.service';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,15 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [InquiryEmployeeService,HttpClientModule],
+  providers: [InquiryEmployeeService,
+              HttpClientModule,
+              HttpInterceptorServiceService,
+              {
+                provide : HTTP_INTERCEPTORS,
+                useClass : HttpInterceptorServiceService,
+                multi : true
+              }            
+            ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

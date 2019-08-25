@@ -1,0 +1,17 @@
+<div class="containerCards">
+     <div *ngFor ="let data of entity" >
+    <div class="card-container">
+     <div>
+         <span class="pcName-span">{{data.pcName}}</span>
+         <span class="os-span">{{data.os}} IP {{data.ip}}</span>
+      </div>  
+      <div class="loginUser">Last logged in User: {{data.loggerUser}}
+      </div>
+      <div>
+          <span class="loginTImeSpan">Login Time {{data.loggedInTime}}</span>
+          <span class="logOutTimeSpan">Logout TIme {{data.logoutTime}}</span>
+      </div>
+      <div class="linkSpan" (click)="saveName(data.pcName)">Resolving it</div>
+    </div>
+    </div>
+</div>    

@@ -1,0 +1,31 @@
+<div class="contain">
+<div class="side-nav">
+  <span class="logout-position">
+    
+  <mat-icon svgIcon="power" [matMenuTriggerFor]="menu" aria-hidden="false" aria-label="Example thumbs up SVG icon">
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="logout()">Logout</button>
+  <button mat-menu-item>Profile</button>
+</mat-menu>
+  </mat-icon>
+  </span>
+  <span class="home-position">
+      <a routerLink="/home"> 
+  <mat-icon svgIcon="home" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon>
+  </a> 
+</span>
+  <span class="workspace-position">
+      <a [routerLink]="['/workSpace',id]">
+      <mat-icon svgIcon="workspace" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon>
+      </a>
+    </span>
+  <span class="setting-position">
+     <a routerLink="/settings">
+     <mat-icon svgIcon="setting" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon>
+    </a>
+  </span>  
+</div>
+<div class="main">
+   <router-outlet></router-outlet>
+</div>
+</div>

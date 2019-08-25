@@ -1,0 +1,26 @@
+<div class="container">
+<div class="row">
+  <div class="col">
+    <mat-checkbox>Subscribe to newsletter</mat-checkbox>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <button mat-stroked-button>Submit</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <mat-radio-group aria-labelledby="example-radio-group-label"
+    [(ngModel)]= "gender" name="radioButton">
+    <mat-radio-button [value]="'Female'">female</mat-radio-button>
+    <mat-radio-button [value]="'Male'">male</mat-radio-button>
+    </mat-radio-group>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <p>{{gender}}</p>
+  </div>
+</div>
+</div>

@@ -1,0 +1,27 @@
+.tab-container
+{
+    display: flex;
+    flex-direction: row;
+}
+.tab-content-position
+{
+    padding: 31px;
+}
+.tabsTag
+{
+    min-height: auto;
+}
+.tabsTag.custom div
+{
+    background-color: transparent;
+    box-shadow: none;
+}
+p {
+    font-family: Lato;
+  }
+.barGraph
+{
+    position: relative;
+    top: 79px;
+    left: 287px;
+}
